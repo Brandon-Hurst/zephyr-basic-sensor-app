@@ -1,0 +1,29 @@
+# Copyright (c) 2021 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  remotes:
+    - name: mainline
+      url-base: https://github.com/zephyrproject-rtos
+    - name: adi
+      url-base: https://github.com/analogdevicesinc
+
+  projects:
+    - name: cmsis_6
+      repo-path: CMSIS_6
+      revision: main
+      path: modules/hal/cmsis_6
+      groups:
+        - hal
+
+    - name: zephyr
+      remote: adi
+
+      revision: main
+      import:
+        # By using name-allowlist we can clone only the modules that are
+        # strictly needed by the application.
+        name-allowlist:
+          - cmsis      # required by the ARM port
+          - cmsis_6
+          - hal_adi    # Analog Devices HAL
