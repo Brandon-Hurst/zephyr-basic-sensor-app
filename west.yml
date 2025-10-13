@@ -10,6 +10,7 @@ manifest:
 
   projects:
     - name: cmsis_6
+      remote: mainline
       repo-path: CMSIS_6
       revision: main
       path: modules/hal/cmsis_6
