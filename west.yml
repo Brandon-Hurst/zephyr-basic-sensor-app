@@ -20,7 +20,7 @@ manifest:
     - name: zephyr
       remote: adi
 
-      revision: main
+      revision: adin6310_switch
       import:
         # By using name-allowlist we can clone only the modules that are
         # strictly needed by the application.
