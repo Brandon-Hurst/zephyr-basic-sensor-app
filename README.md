@@ -41,7 +41,7 @@ command:
 
 ```shell
 # initialize my-workspace for the example-application (main branch)
-west init -m https://github.com/Brandon-Hurst/basic-sensor-app --mr max31723 sensor-workspace
+west init -m https://github.com/Brandon-Hurst/basic-sensor-app sensor-workspace
 
 # update Zephyr modules
 cd sensor-workspace
